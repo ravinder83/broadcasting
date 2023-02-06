@@ -1,0 +1,20 @@
+1- install pusher
+    composer require pusher/pusher-php-server
+2- setting values in .env file.
+3- setting options / cluster in config/broadcasting.php file.
+
+
+
+
+Events and Event Listeners :-
+1- In app/providers/EventServiceProvider
+    registered event and event Listeners
+
+        protected $listen = [
+        'App\Events\TaskEvent' => [
+            'App\Listeners\TaskEventListener',
+        ],
+    ];
+
+2- Now run (php artisan event:generate) command that generation events and listener folder with the respective file.
+    we can also seperately create events and listener foler through their specifice creation commands.
